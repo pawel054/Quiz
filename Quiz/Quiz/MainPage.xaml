@@ -3,22 +3,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Quiz.MainPage">
 
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
+    <StackLayout BackgroundColor="#B5D8F1">
+        <StackLayout x:Name="startGameView" HorizontalOptions="Center" Margin="0,50,0,0">
+            <Frame BackgroundColor="White" CornerRadius="20" Padding="10,0,10,0" WidthRequest="250">
+                <Entry x:Name="userNameEntry" Placeholder="Nick" HorizontalTextAlignment="Center"/>
+            </Frame>
+            <Button x:Name="startButton" Text="Rozpocznij quiz" BackgroundColor="#3578DE" TextColor="White" TextTransform="None" CornerRadius="20" FontSize="18" WidthRequest="200" HorizontalOptions="Center" Margin="0,20,0,10" Clicked="StartQuiz"/>
+            <Button x:Name="viewScoresButton" Text="Ranking" BackgroundColor="#5785CA" TextColor="White" TextTransform="None" CornerRadius="20" FontSize="18" WidthRequest="150" HorizontalOptions="Center" Clicked="ViewScoresClicked"/>
+        </StackLayout>
+        <StackLayout x:Name="gameView" HorizontalOptions="Center" Margin="0,60,0,0" Spacing="20" IsVisible="false">
+            <Frame BackgroundColor="#5785CA" CornerRadius="25" WidthRequest="280" HorizontalOptions="Center">
+                <Label x:Name="questionLabel" Text="question" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White" FontSize="20" IsVisible="false"/>
+            </Frame>
+            <Frame BackgroundColor="White" CornerRadius="20" WidthRequest="150" HorizontalOptions="Center" Padding="10,0,10,0">
+                <Entry x:Name="answerEntry" Placeholder="Odpowiedź" HorizontalTextAlignment="Center" IsVisible="false"/>
+            </Frame>
+            <Frame x:Name="feedbackFrame" BackgroundColor="White" CornerRadius="20" WidthRequest="150" HorizontalOptions="Center" IsVisible="false">
+                <Label x:Name="feedbackLabel" Text="text" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" IsVisible="false"/>
+            </Frame>
+            <Button x:Name="submitAnswerButton" Text="Zatwierdź odpowiedź" BackgroundColor="#3578DE" TextColor="White" CornerRadius="20" HorizontalOptions="Center" WidthRequest="220" TextTransform="None" FontSize="17" Margin="0,10,0,0" IsVisible="false" Clicked="SubmitAnswer"/>
+        </StackLayout>
     </StackLayout>
 
 </ContentPage>
