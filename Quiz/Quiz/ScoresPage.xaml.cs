@@ -15,6 +15,7 @@ namespace Quiz
         public ScoresPage()
         {
             InitializeComponent();
+            LoadScores();
         }
 
         private async void LoadScores()
