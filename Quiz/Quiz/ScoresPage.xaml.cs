@@ -23,11 +23,11 @@ namespace Quiz
 
             var sortedScores = scores.OrderByDescending(score => score.Score).ThenBy(score => score.TotalTime).ToList();
 
-            var groupedScores = sortedScores.GroupBy(score => score.Score).SelectMany(group => group.OrderBy(score => score.TotalTime).ToList());
+            var groupedScores = sortedScores.GroupBy(score => score.Score).SelectMany(group => group.OrderBy(score => score.TotalTime)).ToList();
 
             for(int i = 0; i < groupedScores.Count; i++)
             {
-                groupedScores[i].RankingPostion = i + 1;
+                groupedScores[i].RankingPosition = i + 1;
             }
 
             scoresCollectionView.ItemsSource = groupedScores;
