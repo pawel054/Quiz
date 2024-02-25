@@ -30,7 +30,7 @@ namespace Quiz
 
         private void StartQuiz(object sender, EventArgs e)
         {
-            if(string.IsNullOrEmpty(userNameEntry.Text))
+            if(string.IsNullOrEmpty(userNameEntry.Text)) 
             {
                 DisplayAlert("Alert", "pole nie może być puste!", "OK");
             }
