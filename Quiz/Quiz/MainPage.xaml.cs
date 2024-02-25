@@ -86,7 +86,7 @@ namespace Quiz
             }
             else
             {
-                feedbackLabel.Text = $"Niestety to jest zła odpowiedź. Poprawna odpowiedź to : {correctAnswer}";
+                feedbackLabel.Text = $"Niestety to jest zła odpowiedź. Poprawna odpowiedź to : {correctAnswer}"; 
                 feedbackFrame.BorderColor = Color.Red;
                 feedbackLabel.TextColor = Color.Red;
             }
