@@ -46,7 +46,7 @@ namespace Quiz
             }
         }
 
-        private void PlayAgainButton(object sender, EventArgs e)
+        private void PlayAgainButton(object sender, EventArgs e) 
         {
             finishGameView.IsVisible = false;
             startGameView.IsVisible = true;
