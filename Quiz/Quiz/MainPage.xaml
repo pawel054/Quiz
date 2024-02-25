@@ -23,6 +23,22 @@
             </Frame>
             <Button x:Name="submitAnswerButton" Text="Zatwierdź odpowiedź" BackgroundColor="#3578DE" TextColor="White" CornerRadius="20" HorizontalOptions="Center" WidthRequest="220" TextTransform="None" FontSize="17" Margin="0,10,0,0" IsVisible="false" Clicked="SubmitAnswer"/>
         </StackLayout>
+        <StackLayout x:Name="finishGameView" IsVisible="false">
+            <Label Text="Koniec quizu" TextColor="White" HorizontalOptions="Center" FontSize="30" FontAttributes="Bold" Padding="30"/>
+            <Frame BackgroundColor="White" CornerRadius="15" HorizontalOptions="Center" WidthRequest="170" Padding="10">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label Text="Punkty: " FontSize="20"/>
+                    <Label x:Name="resultPoints" Text="txt" FontSize="20"/>
+                </StackLayout>
+            </Frame>
+            <Frame BackgroundColor="White" CornerRadius="15" HorizontalOptions="Center" WidthRequest="170" Padding="10" Margin="0,10,0,40">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label Text="Czas: " FontSize="20"/>
+                    <Label x:Name="resultTime" Text="txt" FontSize="20"/>
+                </StackLayout>
+            </Frame>
+            <Button x:Name="playAgainButton" Text="Zagraj ponownie" BackgroundColor="#3578DE" TextColor="White" CornerRadius="20" TextTransform="None" HorizontalOptions="Center" WidthRequest="220" Clicked="PlayAgainButton"/>
+        </StackLayout>
     </StackLayout>
 
 </ContentPage>
