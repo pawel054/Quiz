@@ -53,7 +53,7 @@ namespace Quiz
             GenerateQuestions();
         }
 
-        private void ShowNextQuestion()
+        private void ShowNextQuestion() 
         {
             submitAnswerButton.IsEnabled = true;
             if(currentQuestionIndex < questions.Count)
