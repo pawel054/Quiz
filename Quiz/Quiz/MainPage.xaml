@@ -37,6 +37,7 @@
                     <Label x:Name="resultTime" Text="txt" FontSize="20"/>
                 </StackLayout>
             </Frame>
+            <Button x:Name="playAgainButton" Text="Zagraj ponownie" BackgroundColor="#3578DE" TextColor="White" CornerRadius="20" TextTransform="None" HorizontalOptions="Center" WidthRequest="220" Clicked="PlayAgainButton"/>
         </StackLayout>
     </StackLayout>
 
