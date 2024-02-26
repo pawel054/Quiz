@@ -119,6 +119,7 @@ namespace Quiz
             gameView.IsVisible = false;
             questionLabel.IsVisible = false;
             answerEntry.IsVisible = false;
+            submitAnswerButton.IsVisible = false;
             resultPoints.Text = currentScore.ToString();
             resultTime.Text = totalTime.ToString("F2");
         }
